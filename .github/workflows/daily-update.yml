@@ -1,9 +1,12 @@
 name: Daily Auto Commit
 
+permissions:
+  contents: write
+
 on:
   schedule:
-    - cron: '15 3 * * *'   # Runs daily at 03:15 UTC
-  workflow_dispatch:        # Allows manual trigger
+    - cron: '15 3 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
